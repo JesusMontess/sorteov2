@@ -41,15 +41,15 @@ function logActivity($empleado_id, $accion, $detalles = null) {
 // Función para verificar sesión activa
 function checkSession() {
     if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_type'])) {
-        header('Location: login.php');
+        header('Location: index.php');
         exit();
     }
     
     // Verificar timeout de sesión (30 minutos)
     if (isset($_SESSION['last_activity']) && 
-        (time() - $_SESSION['last_activity'] > 1800)) {
+        (time() - $_SESSION['last_activity'] > 60)) {
         session_destroy();
-        header('Location: login.php?timeout=1');
+        header('Location: index.php?timeout=1');
         exit();
     }
     
