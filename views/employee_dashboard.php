@@ -189,6 +189,14 @@
                                 <span class="label">Total Participantes:</span>
                                 <span class="value" id="totalParticipantes">Cargando...</span>
                             </div>
+                            <div class="info-item">
+                                <span class="label">Fecha Inicio Sorteo:</span>
+                                <span class="value" id="fechaInicioSorteo">Cargando...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Fecha Fin Sorteo:</span>
+                                <span class="value" id="fechaCierreSorteo">Cargando...</span>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,34 @@
+SELECT 
+    bc.numero_balota,
+    bc.fecha_eleccion,
+    aps.descripcion as nombre_sorteo,
+    aps.fecha_cierre_sorteo
+FROM balota_concursante bc
+INNER JOIN empleados_en_sorteo es ON bc.id_empleado_sort = es.id
+INNER JOIN apertura_sorteo aps ON es.id_sorteo = aps.id
+INNER JOIN empleados e ON es.id_empleado = e.id
+WHERE e.id = '1124046538'
+  AND aps.id != (
+    SELECT es2.id_sorteo 
+    FROM empleados_en_sorteo es2 
+    WHERE es2.id_empleado = '1124046538'
+      AND es2.id_sorteo = (
+        SELECT id FROM apertura_sorteo 
+        WHERE estado = '1' OR NOW() BETWEEN fecha_inicio_sorteo AND fecha_cierre_sorteo
+        LIMIT 1
+      )
+  )
+ORDER BY aps.fecha_cierre_sorteo DESC, bc.fecha_eleccion DESC;
+
+SELECT 
+    bc.numero_balota,
+    bc.fecha_eleccion,
+    aps.descripcion as nombre_sorteo,
+    aps.fecha_inicio_sorteo,
+    aps.fecha_cierre_sorteo
+FROM balota_concursante bc
+INNER JOIN empleados_en_sorteo es ON bc.id_empleado_sort = es.id
+INNER JOIN empleados e ON es.id_empleado = e.id
+INNER JOIN apertura_sorteo aps ON es.id_sorteo = aps.id
+WHERE e.id = '462'
+ORDER BY bc.fecha_eleccion DESC;

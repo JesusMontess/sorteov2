@@ -20,6 +20,7 @@ try {
     $query = "SELECT es.cantidad_elecciones,
                      (SELECT COUNT(*) FROM balota_concursante WHERE id_empleado_sort = es.id) as numeros_elegidos,
                      aps.descripcion as sorteo_nombre,
+                     aps.fecha_inicio_sorteo,
                      aps.fecha_cierre_sorteo
               FROM empleados_en_sorteo es
               INNER JOIN apertura_sorteo aps ON es.id_sorteo = aps.id
@@ -35,7 +36,9 @@ try {
         $stats['elecciones_disponibles'] = $empleado_data['cantidad_elecciones'];
         $stats['numeros_elegidos'] = $empleado_data['numeros_elegidos'];
         $stats['elecciones_restantes'] = $empleado_data['cantidad_elecciones'] - $empleado_data['numeros_elegidos'];
+        $stats['fecha_inicio_sorteo'] = $empleado_data['fecha_inicio_sorteo'];
         $stats['fecha_cierre'] = $empleado_data['fecha_cierre_sorteo'];
+        $stats['fecha_cierre_sorteo'] = $empleado_data['fecha_cierre_sorteo'];
     }
     
     // Info del sorteo
