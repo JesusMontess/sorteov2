@@ -1,0 +1,75 @@
+[2025-07-03 18:15:46] [SorteoController] === INICIALIZANDO SORTEO CONTROLLER ===
+[2025-07-03 18:15:46] [SorteoController] Creando conexión a base de datos...
+[2025-07-03 18:15:46] [SorteoController] Conexión a base de datos exitosa
+[2025-07-03 18:15:46] [SorteoController] Creando instancia del modelo Sorteo...
+[2025-07-03 18:15:46] [SorteoController] Modelo Sorteo creado exitosamente
+[2025-07-03 18:15:46] [SorteoController] Creando instancia del modelo User...
+[2025-07-03 18:15:46] [SorteoController] Modelo User creado exitosamente
+[2025-07-03 18:15:46] [SorteoController] === MÉTODO INSCRIBIR EMPLEADO ===
+[2025-07-03 18:15:46] [SorteoController] Verificando permisos administrativos...
+[2025-07-03 18:15:46] [SorteoController] Permisos administrativos verificados
+[2025-07-03 18:15:46] [SorteoController] Método POST verificado, procesando datos...
+[2025-07-03 18:15:46] [SorteoController] Datos filtrados | Data: Array
+(
+    [id_sorteo] => 12
+    [numero_documento] => 1124002780
+    [cantidad_elecciones] => 1
+    [fecha_final] => 2025-10-01
+)
+
+[2025-07-03 18:15:46] [SorteoController] Buscando empleado por documento: 1124002780
+[2025-07-03 18:15:46] [SorteoController] ERROR al buscar empleado: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'estado_empleado' in 'where clause'
+[2025-07-03 18:21:11] [SorteoController] === INICIALIZANDO SORTEO CONTROLLER ===
+[2025-07-03 18:21:11] [SorteoController] Creando conexión a base de datos...
+[2025-07-03 18:21:11] [SorteoController] Conexión a base de datos exitosa
+[2025-07-03 18:21:11] [SorteoController] Creando instancia del modelo Sorteo...
+[2025-07-03 18:21:11] [SorteoController] Modelo Sorteo creado exitosamente
+[2025-07-03 18:21:11] [SorteoController] Creando instancia del modelo User...
+[2025-07-03 18:21:11] [SorteoController] Modelo User creado exitosamente
+[2025-07-03 18:21:11] [SorteoController] === MÉTODO INSCRIBIR EMPLEADO ===
+[2025-07-03 18:21:11] [SorteoController] Verificando permisos administrativos...
+[2025-07-03 18:21:11] [SorteoController] Permisos administrativos verificados
+[2025-07-03 18:21:11] [SorteoController] Método POST verificado, procesando datos...
+[2025-07-03 18:21:12] [SorteoController] Datos filtrados | Data: Array
+(
+    [id_sorteo] => 12
+    [numero_documento] => 1124002780
+    [cantidad_elecciones] => 1
+    [fecha_final] => 2025-07-04
+)
+
+[2025-07-03 18:21:12] [SorteoController] Buscando empleado por documento: 1124002780
+[2025-07-03 18:21:12] [SorteoController] Resultado de búsqueda de empleado | Data: Array
+(
+    [id] => 1
+    [tipo_documento] => CC
+    [numero_documento] => 1124002780
+    [nombre_completo] => ETELVINA ROJAS GOURIYU
+    [cargo] => APOYO SENA (ETAPA LECTIVA)
+    [area] =>  NO ASIGNADO
+    [estado_emplado] => 1
+)
+
+[2025-07-03 18:21:12] [SorteoController] Empleado encontrado exitosamente | Data: Array
+(
+    [id] => 1
+    [tipo_documento] => CC
+    [numero_documento] => 1124002780
+    [nombre_completo] => ETELVINA ROJAS GOURIYU
+    [cargo] => APOYO SENA (ETAPA LECTIVA)
+    [area] =>  NO ASIGNADO
+    [estado_emplado] => 1
+)
+
+[2025-07-03 18:21:12] [SorteoController] Verificando que el sorteo existe...
+[2025-07-03 18:21:12] [SorteoController] Inscribiendo empleado en sorteo...
+[2025-07-03 18:21:12] [SorteoController] Resultado de inscripción | Data: Array
+(
+    [success] => 1
+    [id] => 9
+)
+
+[2025-07-03 18:21:12] [SorteoController] Inscripción exitosa, creando usuario concursante...
+[2025-07-03 18:21:12] [SorteoController] Usuario concursante creado exitosamente
+[2025-07-03 18:21:12] [SorteoController] Actividad registrada exitosamente
+[2025-07-03 18:21:12] [SorteoController] Proceso de inscripción completado exitosamente

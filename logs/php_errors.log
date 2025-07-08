@@ -1,0 +1,16 @@
+[03-Jul-2025 18:15:46 America/Bogota] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\wamp64\www\sorteov2\controllers\SorteoController.php on line 214
+[03-Jul-2025 18:15:46 America/Bogota] PHP Stack trace:
+[03-Jul-2025 18:15:46 America/Bogota] PHP   1. {main}() C:\wamp64\www\sorteov2\api\inscribir_empleado.php:0
+[03-Jul-2025 18:15:46 America/Bogota] PHP   2. SorteoController->inscribirEmpleado() C:\wamp64\www\sorteov2\api\inscribir_empleado.php:165
+[03-Jul-2025 18:15:46 America/Bogota] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\wamp64\www\sorteov2\controllers\SorteoController.php on line 216
+[03-Jul-2025 18:15:46 America/Bogota] PHP Stack trace:
+[03-Jul-2025 18:15:46 America/Bogota] PHP   1. {main}() C:\wamp64\www\sorteov2\api\inscribir_empleado.php:0
+[03-Jul-2025 18:15:46 America/Bogota] PHP   2. SorteoController->inscribirEmpleado() C:\wamp64\www\sorteov2\api\inscribir_empleado.php:165
+[03-Jul-2025 18:21:11 America/Bogota] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\wamp64\www\sorteov2\controllers\SorteoController.php on line 214
+[03-Jul-2025 18:21:11 America/Bogota] PHP Stack trace:
+[03-Jul-2025 18:21:11 America/Bogota] PHP   1. {main}() C:\wamp64\www\sorteov2\api\inscribir_empleado.php:0
+[03-Jul-2025 18:21:11 America/Bogota] PHP   2. SorteoController->inscribirEmpleado() C:\wamp64\www\sorteov2\api\inscribir_empleado.php:165
+[03-Jul-2025 18:21:11 America/Bogota] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\wamp64\www\sorteov2\controllers\SorteoController.php on line 216
+[03-Jul-2025 18:21:11 America/Bogota] PHP Stack trace:
+[03-Jul-2025 18:21:11 America/Bogota] PHP   1. {main}() C:\wamp64\www\sorteov2\api\inscribir_empleado.php:0
+[03-Jul-2025 18:21:11 America/Bogota] PHP   2. SorteoController->inscribirEmpleado() C:\wamp64\www\sorteov2\api\inscribir_empleado.php:165

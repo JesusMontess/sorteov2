@@ -342,6 +342,66 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 5000);
     }
+    //alerta v2
+    function showAlert2(message, type = 'info', duration = 5000) {
+            if (!alertContainer) return;
+
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type}`;
+            
+            const icon = alertIcons[type] || alertIcons['info'];
+            
+            alert.innerHTML = `
+                <div class="alert-content">
+                    ${icon}
+                    <div class="alert-message">${message}</div>
+                    <button class="alert-close" onclick="closeAlert(this)" title="Cerrar">×</button>
+                </div>
+                <div class="alert-progress"></div>
+            `;
+
+            alertContainer.appendChild(alert);
+
+            // Auto-remover después de la duración especificada
+            const timeout = setTimeout(() => {
+                closeAlert(alert.querySelector('.alert-close'));
+            }, duration);
+
+            // Guardar el timeout para poder cancelarlo si se cierra manualmente
+            alert.dataset.timeout = timeout;
+        }
+
+        function closeAlert(button) {
+            const alert = button.closest('.alert');
+            if (!alert) return;
+
+            // Cancelar el timeout automático
+            if (alert.dataset.timeout) {
+                clearTimeout(alert.dataset.timeout);
+            }
+
+            // Animación de salida
+            alert.style.animation = 'slideOutRight 0.3s ease-in forwards';
+            
+            setTimeout(() => {
+                if (alert.parentElement) {
+                    alert.remove();
+                }
+            }, 300);
+        }
+
+        // Función para limpiar todas las alertas
+        function clearAllAlerts() {
+            const alerts = alertContainer.querySelectorAll('.alert');
+            alerts.forEach(alert => {
+                closeAlert(alert.querySelector('.alert-close'));
+            });
+        }
+
+        // Ejemplo de uso con diferentes duraciones
+        function showTemporaryAlert(message, type, seconds) {
+            showAlert(message, type, seconds * 1000);
+        }
 
     // Validación en tiempo real del número de documento
     const documentoInput = document.getElementById('numero_documento');

@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Panel - Sistema de Sorteos</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/password_css_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -172,64 +171,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Cambiar Contraseña Tab -->
-                    <div id="cambiar-password-tab" class="tab-panel">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>Cambiar Contraseña</h3>
-                                <p>Actualiza tu contraseña para mayor seguridad</p>
-                            </div>
-                            <div class="card-body">
-                                <form id="changePasswordForm" class="password-form">
-                                    <div class="form-group">
-                                        <label for="current_password">Contraseña Actual</label>
-                                        <div class="password-input-wrapper">
-                                            <input type="password" id="current_password" name="current_password" required>
-                                            <button type="button" class="password-toggle" onclick="togglePassword('current_password')">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="new_password">Nueva Contraseña</label>
-                                        <div class="password-input-wrapper">
-                                            <input type="password" id="new_password" name="new_password" required minlength="6">
-                                            <button type="button" class="password-toggle" onclick="togglePassword('new_password')">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                        </div>
-                                        <small class="form-text">Mínimo 6 caracteres</small>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="confirm_password">Confirmar Nueva Contraseña</label>
-                                        <div class="password-input-wrapper">
-                                            <input type="password" id="confirm_password" name="confirm_password" required minlength="6">
-                                            <button type="button" class="password-toggle" onclick="togglePassword('confirm_password')">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="password-requirements">
-                                        <h5>Requisitos de la contraseña:</h5>
-                                        <ul>
-                                            <li id="length-req">Mínimo 6 caracteres</li>
-                                            <li id="match-req">Las contraseñas deben coincidir</li>
-                                            <li id="different-req">Debe ser diferente a la actual</li>
-                                        </ul>
-                                    </div>
-
-                                    <button type="submit" class="btn-primary btn-large" id="changePasswordBtn">
-                                        <i class="fas fa-key"></i>
-                                        Cambiar Contraseña
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Números Disponibles Info -->
@@ -301,36 +242,6 @@
                 <button type="button" class="btn-primary" onclick="confirmarEleccion()">
                     <i class="fas fa-check"></i>
                     Confirmar
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal de Confirmación de Cambio de Contraseña -->
-    <div id="passwordChangeModal" class="modal">
-        <div class="modal-content small">
-            <div class="modal-header">
-                <h3>Confirmar Cambio de Contraseña</h3>
-                <button class="modal-close" onclick="closeModal('passwordChangeModal')">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="confirm-content">
-                    <div class="confirm-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <p>¿Estás seguro de que quieres cambiar tu contraseña?</p>
-                    <small>Asegúrate de recordar tu nueva contraseña</small>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn-secondary" onclick="closeModal('passwordChangeModal')">
-                    Cancelar
-                </button>
-                <button type="button" class="btn-primary" onclick="confirmarCambioPassword()">
-                    <i class="fas fa-key"></i>
-                    Cambiar Contraseña
                 </button>
             </div>
         </div>
