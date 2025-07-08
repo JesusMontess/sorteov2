@@ -47,7 +47,7 @@ function checkSession() {
     
     // Verificar timeout de sesión (30 minutos)
     if (isset($_SESSION['last_activity']) && 
-        (time() - $_SESSION['last_activity'] > 1800)) {
+        (time() - $_SESSION['last_activity'] > 60)) {
         session_destroy();
         header('Location: index.php?timeout=1');
         exit();

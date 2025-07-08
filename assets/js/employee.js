@@ -691,8 +691,6 @@ $(document).ready(function() {
     function updateEmployeeStats(stats) {
         $('#eleccionesDisponibles').text(stats.elecciones_restantes || 0);
         $('#numerosElegidos').text(stats.numeros_elegidos || 0);
-        $('#fechaInicioSorteo').text(stats.fecha_inicio_sorteo || 0);
-        $('#fechaCierreSorteo').text(stats.fecha_cierre_sorteo || 0);
         
         // Calcular tiempo restante
         if (stats.fecha_cierre) {
@@ -712,7 +710,6 @@ $(document).ready(function() {
         $('#sorteoActivo').text(info.nombre || 'No disponible');
         $('#numerosDisponibles').text(info.numeros_disponibles || 0);
         $('#totalParticipantes').text(info.total_participantes || 0);
-        
     }
 
     function updateTimeRemaining(fechaCierre) {
