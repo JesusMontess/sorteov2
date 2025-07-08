@@ -1,0 +1,92 @@
+[2025-07-03 18:15:46] === INICIO DE INSCRIPCIÓN DE EMPLEADO ===
+[2025-07-03 18:15:46] Método HTTP | Data: POST
+[2025-07-03 18:15:46] Datos POST recibidos | Data: Array
+(
+    [id_sorteo] => 12
+    [numero_documento] => 1124002780
+    [cantidad_elecciones] => 1
+    [fecha_final] => 2025-10-01
+)
+
+[2025-07-03 18:15:46] Información de sesión | Data: Array
+(
+    [user_id] => 1124046538
+    [user_name] => JESUS ALBERTO MONTES SANCHEZ
+    [nivel_permiso] => 1
+    [rol_nombre] => Administrador
+)
+
+[2025-07-03 18:15:46] Verificando permisos administrativos...
+[2025-07-03 18:15:46] Permisos administrativos verificados correctamente
+[2025-07-03 18:15:46] Datos validados | Data: Array
+(
+    [id_sorteo] => 12
+    [numero_documento] => 1124002780
+    [cantidad_elecciones] => 1
+    [fecha_final] => 2025-10-01
+)
+
+[2025-07-03 18:15:46] Todas las validaciones pasaron correctamente
+[2025-07-03 18:15:46] Creando instancia del controlador...
+[2025-07-03 18:15:46] Controlador creado exitosamente
+[2025-07-03 18:15:46] Llamando al método inscribirEmpleado del controlador...
+[2025-07-03 18:15:46] Resultado del controlador | Data: Array
+(
+    [success] => 
+    [message] => Error al buscar empleado: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'estado_empleado' in 'where clause'
+)
+
+[2025-07-03 18:15:46] Proceso completado exitosamente | Data: Array
+(
+    [success] => 
+    [message] => Error al buscar empleado: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'estado_empleado' in 'where clause'
+)
+
+[2025-07-03 18:15:46] === FIN DE INSCRIPCIÓN DE EMPLEADO ===
+
+[2025-07-03 18:21:11] === INICIO DE INSCRIPCIÓN DE EMPLEADO ===
+[2025-07-03 18:21:11] Método HTTP | Data: POST
+[2025-07-03 18:21:11] Datos POST recibidos | Data: Array
+(
+    [id_sorteo] => 12
+    [numero_documento] => 1124002780
+    [cantidad_elecciones] => 1
+    [fecha_final] => 2025-07-04
+)
+
+[2025-07-03 18:21:11] Información de sesión | Data: Array
+(
+    [user_id] => 1124046538
+    [user_name] => JESUS ALBERTO MONTES SANCHEZ
+    [nivel_permiso] => 1
+    [rol_nombre] => Administrador
+)
+
+[2025-07-03 18:21:11] Verificando permisos administrativos...
+[2025-07-03 18:21:11] Permisos administrativos verificados correctamente
+[2025-07-03 18:21:11] Datos validados | Data: Array
+(
+    [id_sorteo] => 12
+    [numero_documento] => 1124002780
+    [cantidad_elecciones] => 1
+    [fecha_final] => 2025-07-04
+)
+
+[2025-07-03 18:21:11] Todas las validaciones pasaron correctamente
+[2025-07-03 18:21:11] Creando instancia del controlador...
+[2025-07-03 18:21:11] Controlador creado exitosamente
+[2025-07-03 18:21:11] Llamando al método inscribirEmpleado del controlador...
+[2025-07-03 18:21:12] Resultado del controlador | Data: Array
+(
+    [success] => 1
+    [message] => Empleado inscrito exitosamente
+)
+
+[2025-07-03 18:21:12] Proceso completado exitosamente | Data: Array
+(
+    [success] => 1
+    [message] => Empleado inscrito exitosamente
+)
+
+[2025-07-03 18:21:12] === FIN DE INSCRIPCIÓN DE EMPLEADO ===
+

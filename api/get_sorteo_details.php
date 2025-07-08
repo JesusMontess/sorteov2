@@ -36,7 +36,7 @@ try {
     }
     
     // Obtener participantes
-    $query_participantes = "SELECT e.numero_documento, e.nombre_completo, e.cargo,
+    $query_participantes = "SELECT e.numero_documento, e.nombre_completo, e.cargo,bc.numero_balota,
                                    es.cantidad_elecciones,
                                    COUNT(bc.id) as elecciones_usadas
                             FROM empleados_en_sorteo es

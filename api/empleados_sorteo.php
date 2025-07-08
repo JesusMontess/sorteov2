@@ -12,7 +12,7 @@ try {
     
     $query = "SELECT es.*, e.numero_documento, e.nombre_completo, e.cargo,
                      aps.descripcion as sorteo_descripcion,
-                     COUNT(bc.id) as elecciones_usadas
+                     COUNT(bc.id) as elecciones_usadas, bc.numero_balota
               FROM empleados_en_sorteo es
               INNER JOIN empleados e ON es.id_empleado = e.id
               INNER JOIN apertura_sorteo aps ON es.id_sorteo = aps.id

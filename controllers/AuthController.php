@@ -30,13 +30,29 @@ class AuthController {
                 $_SESSION['user_document'] = $result['user_data']['numero_documento'];
                 $_SESSION['last_activity'] = time();
 
-                if ($result['user_type'] == 'concursante') {
+                
+
+                // CORREGIDO: Manejar roles correctamente
+                if ($result['user_type'] == 'moderador') {
+                    // Capturar directamente los datos que envía User.php
+                    $_SESSION['nivel_permiso'] = $result['user_data']['nivel_permiso'];
+                    $_SESSION['rol_nombre'] = $result['user_data']['rol_nombre'];
+                    
+                    // Debug temporal - ELIMINAR después de probar
+                    error_log("DEBUG - Datos recibidos: " . print_r($result['user_data'], true));
+                    error_log("DEBUG - nivel_permiso: " . $result['user_data']['nivel_permiso']);
+                    error_log("DEBUG - rol_nombre: " . $result['user_data']['rol_nombre']);
+                    
+                } elseif ($result['user_type'] == 'concursante') {
+                    $_SESSION['rol_nombre'] = 'Empleado';
                     $_SESSION['id_empleado_sort'] = $result['user_data']['id_empleado_sort'];
                     $_SESSION['elecciones_disponibles'] = $result['user_data']['cantidad_elecciones'];
                 }
 
                 // Registrar login en logs
-                logActivity($_SESSION['user_id'], 'LOGIN', 'Usuario ingresó al sistema');
+                if (function_exists('logActivity')) {
+                    logActivity($_SESSION['user_id'], 'LOGIN', 'Usuario ingresó al sistema');
+                }
 
                 return ['success' => true, 'redirect' => 'dashboard.php'];
             }
